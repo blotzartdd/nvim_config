@@ -31,9 +31,6 @@ mason_lspconfig.setup({
     "ltex", -- Latex
     "rust_analyzer", -- Rust
     "lua_ls", -- Lua
-    "solc", -- Solidity
-    "solidity", -- Solidity
-    "solang", -- Solidity
     "solidity_ls", -- Solidity
     "templ", -- HTML
     "denols", -- JS

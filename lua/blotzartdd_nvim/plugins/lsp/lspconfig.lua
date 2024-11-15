@@ -89,26 +89,12 @@ lspconfig["rust_analyzer"].setup({
   on_attach = on_attach,
 })
 
-lspconfig["solang"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
-
-lspconfig["solc"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
-
-lspconfig["solidity"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
-
 lspconfig["solidity_ls"].setup {
     capabilities = capabilities,
     on_attach = on_attach,
     filetypes = { "solidity" },
     root_dir = lspconfig.util.root_pattern("hardhat.config.*", ".git"),
+    cmd = { 'vscode-solidity-server', '--stdio' },
 }
 
 lspconfig["templ"].setup({
