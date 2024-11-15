@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
+local package_path_str = "/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?.lua;/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1727870382/share/lua/5.1/?/init.lua;/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?.lua;/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1727870382/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/blotzartdd/.cache/nvim/packer_hererocks/2.1.1727870382/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -129,6 +129,16 @@ _G.packer_plugins = {
     path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["efm-langserver"] = {
+    loaded = true,
+    path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/efm-langserver",
+    url = "https://github.com/mattn/efm-langserver"
+  },
+  ["efmls-configs-nvim"] = {
+    loaded = true,
+    path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/efmls-configs-nvim",
+    url = "https://github.com/creativenull/efmls-configs-nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -138,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["hardhat-vscode"] = {
+    loaded = true,
+    path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/hardhat-vscode",
+    url = "https://github.com/NomicFoundation/hardhat-vscode"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -220,6 +235,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["prettier-plugin-solidity"] = {
+    loaded = true,
+    path = "/Users/blotzartdd/.local/share/nvim/site/pack/packer/start/prettier-plugin-solidity",
+    url = "https://github.com/prettier-solidity/prettier-plugin-solidity"
   },
   ["rust-tools.nvim"] = {
     loaded = true,

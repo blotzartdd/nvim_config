@@ -31,7 +31,10 @@ mason_lspconfig.setup({
     "ltex", -- Latex
     "rust_analyzer", -- Rust
     "lua_ls", -- Lua
+    "solc", -- Solidity
+    "solidity", -- Solidity
     "solang", -- Solidity
+    "solidity_ls", -- Solidity
     "templ", -- HTML
     "denols", -- JS
     "asm_lsp", -- Assembly
@@ -45,9 +48,10 @@ mason_null_ls.setup({
   -- list of formatters & linters for mason to install
 
   ensure_installed = {
-   "clang_format",
-   "cpplint",
-    "golangci_lint_ls",
+    "clang_format",
+    "cpplint",
+    "solhint",
+    "prettierd",
   },
   -- auto-install configured formatters & linters (with null-ls)
   automatic_installation = true,

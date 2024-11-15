@@ -94,6 +94,23 @@ lspconfig["solang"].setup({
   on_attach = on_attach,
 })
 
+lspconfig["solc"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+lspconfig["solidity"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+lspconfig["solidity_ls"].setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = { "solidity" },
+    root_dir = lspconfig.util.root_pattern("hardhat.config.*", ".git"),
+}
+
 lspconfig["templ"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
@@ -107,4 +124,25 @@ lspconfig["denols"].setup({
 lspconfig["asm_lsp"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
+})
+
+local solhint = require("efmls-configs.linters.solhint")
+local prettier_d = require("efmls-configs.formatters.prettier_d")
+lspconfig.efm.setup({
+    filetypes = {
+        "solidity",
+    },
+    init_options = {
+			documentFormatting = true,
+			documentRangeFormatting = true,
+			hover = true,
+			documentSymbol = true,
+			codeAction = true,
+			completion = true,
+		},
+    settings = {
+			languages = {
+				solidity = { solhint, prettier_d },
+			},
+		},
 })
